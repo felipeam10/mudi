@@ -23,4 +23,13 @@ public class HomeController {
 		model.addAttribute("pedidos", pedidos);
 		return "home";
 	}
+	/*// Dessa forma, os parâmetros do método ficam reservados para os dados da requisição (o input) e o retorno do método fica reservado para os dados da view (o output).
+	@GetMapping("/home")
+	public ModelAndView home() {
+	    List<Pedido> pedidos = pedidoRepository.findAll();
+	    ModelAndView mv = new ModelAndView("home");
+	    mv.addObject("pedidos", pedidos);
+	    return mv; 
+	}
+	*/  
 }
