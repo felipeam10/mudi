@@ -1,12 +1,20 @@
 package br.com.felipe.mvc.mudi.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import br.com.felipe.mvc.mudi.model.Pedido;
 
 public class RequisicaoNovoPedido {
 
+	@NotBlank
 	private String nomeProduto;
+	
+	@NotBlank
 	private String urlProduto;
+	
+	@NotBlank
 	private String urlImagem;
+	
 	private String descricaoProduto;
 
 	public String getNomeProduto() {
