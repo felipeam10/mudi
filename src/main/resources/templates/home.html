@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-<style>
-	.logo-container {
-		background-color: #47bcff;
-		color: #fff;
-	}
-	
-	.logo {
-		font-family: 'Handlee', cursive;
-		font-size: 2.5rem;
-	}
-</style>
-</head>
+<head th:replace="~{base :: head}"></head> <!-- templates -->
 <body>
-	<div class="logo-container d-flex justify-content-between mb-3 p-3">
-		<span class="logo">PedidosWeb</span>
-		<span class="mt-3">login</span>
-	</div>
-	
+	<div th:replace="~{base :: logo}"></div> <!-- templates -->
 	<div class="container">
-		<div class="jumbotron mb-0">
-			<h1 class="display-4">Meus Pedidos</h1>
-		</div>
+		<div  th:replace="~{base :: titulo('Meus Pedidos')}"></div>
 		<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
 			<div class="navbar-nav">
 				<a class="nav-link active" href="#">Todos</a>
@@ -51,7 +29,7 @@
 				
 						<div>Descrição</div>
 						<div>
-							<textarea class="form-control" th:text="${pedido.descricao}">descrição do pedido</textarea>
+							<textarea class="form-control" th:text="${pedido.descricao}">descri��o do pedido</textarea>
 						</div>
 					</div>
 					<div class="col-12 col-sm-4">
