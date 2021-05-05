@@ -3,6 +3,7 @@ package br.com.felipe.mvc.mudi.dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.felipe.mvc.mudi.model.Pedido;
+import br.com.felipe.mvc.mudi.model.StatusPedido;
 
 public class RequisicaoNovoPedido {
 
@@ -55,6 +56,7 @@ public class RequisicaoNovoPedido {
 		pedido.setDescricao(descricaoProduto);
 		pedido.setUrlImagem(urlImagem);
 		pedido.setUrlProduto(urlProduto);
+		pedido.setStatus(StatusPedido.AGUARDANDO);
 				
 		return pedido;
 	}
